@@ -19,7 +19,10 @@ set_seed(42)
 def load_sentiment_model():
     # A robust model for general sentiment analysis (e.g., 'distilbert-base-uncased-finetuned-sst-2-english')
     # For speed, we'll use a very common and efficient one.
-    return pipeline("sentiment-analysis")
+    return pipeline(
+    "sentiment-analysis", 
+    model="finiteautomata/bertweet-base-sentiment-analysis" # Smaller, faster model
+)
 
 @st.cache_resource
 def load_generator_model():
