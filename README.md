@@ -1,14 +1,14 @@
-\# AI Sentiment-Aligned Text Generator
+# AI Sentiment-Aligned Text Generator
 
-\#\# 🎯 Objective
+##  Objective
 
 This project implements an AI text generation system that dynamically adjusts its output based on the sentiment of the input prompt. It integrates sentiment analysis to classify the user's input (positive, negative, or neutral) and subsequently uses prompt engineering to condition a text generation model to produce an essay or paragraph aligned with the detected sentiment.
 
-\#\# 🛠️ Technical Approach and Methodology
+## 🛠️ Technical Approach and Methodology
 
-\#\#\# 1\. Sentiment Analysis
+### 1. Sentiment Analysis
 
-\* \*\*Model Used:\*\* A pre-trained BERT-based model for sentiment classification (specifically, the \`distilbert-base-uncased-finetuned-sst-2-english\` variant, used via the \`sentiment-analysis\` pipeline in Hugging Face).  
+* \*\*Model Used:\*\* A pre-trained BERT-based model for sentiment classification (specifically, the \`distilbert-base-uncased-finetuned-sst-2-english\` variant, used via the \`sentiment-analysis\` pipeline in Hugging Face).  
 \* \*\*Classification:\*\* The model classifies the text as \`POSITIVE\` or \`NEGATIVE\`. A simple rule was implemented to classify text with a confidence score below 80% as \`NEUTRAL\`.  
 \* \*\*Framework:\*\* Hugging Face \`transformers\` library with PyTorch backend.
 
