@@ -8,17 +8,17 @@ This project implements an AI text generation system that dynamically adjusts it
 
 ### 1. Sentiment Analysis
 
-* \*\*Model Used:\*\* A pre-trained BERT-based model for sentiment classification (specifically, the \`distilbert-base-uncased-finetuned-sst-2-english\` variant, used via the \`sentiment-analysis\` pipeline in Hugging Face).  
-\* \*\*Classification:\*\* The model classifies the text as \`POSITIVE\` or \`NEGATIVE\`. A simple rule was implemented to classify text with a confidence score below 80% as \`NEUTRAL\`.  
-\* \*\*Framework:\*\* Hugging Face \`transformers\` library with PyTorch backend.
+** Model Used:** A pre-trained BERT-based model for sentiment classification (specifically, the \`distilbert-base-uncased-finetuned-sst-2-english\` variant, used via the \`sentiment-analysis\` pipeline in Hugging Face).  
+**Classification:\*\* The model classifies the text as \`POSITIVE\` or \`NEGATIVE\`. A simple rule was implemented to classify text with a confidence score below 80% as \`NEUTRAL\`.  
+**Framework:\*\* Hugging Face \`transformers\` library with PyTorch backend.
 
-\#\#\# 2\. Text Generation
+### 2. Text Generation
 
-\* \*\*Model Used:\*\* \*\*DistilGPT-2\*\* (a smaller, faster version of GPT-2). This model was chosen for its balance of generation quality and fast loading time, which is critical for a web demo.  
-\* \*\*Sentiment Alignment:\*\* Since DistilGPT-2 is not inherently sentiment-controllable, \*\*Prompt Engineering\*\* was used. The detected sentiment (e.g., "The overall mood should be \*\*positive\*\*.") is prepended to the user's prompt, guiding the model's tone for the generated output.  
-\* \*\*Framework:\*\* Hugging Face \`transformers\` library.
+**Model Used:\*\* \*\*DistilGPT-2\*\* (a smaller, faster version of GPT-2). This model was chosen for its balance of generation quality and fast loading time, which is critical for a web demo.  
+**Sentiment Alignment:\*\* Since DistilGPT-2 is not inherently sentiment-controllable, \*\*Prompt Engineering\*\* was used. The detected sentiment (e.g., "The overall mood should be \*\*positive\*\*.") is prepended to the user's prompt, guiding the model's tone for the generated output.  
+**Framework:\*\* Hugging Face \`transformers\` library.
 
-\#\#\# 3\. Frontend Implementation
+\#\#\# 3. Frontend Implementation
 
 \* \*\*Framework:\*\* \*\*Streamlit\*\*. This framework was selected for its capability to rapidly build and deploy interactive Python-based web applications, fulfilling the requirement for a functional, user-friendly interface with minimal code overhead.
 
