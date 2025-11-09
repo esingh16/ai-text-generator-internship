@@ -1,0 +1,4 @@
+﻿streamlit 
+transformers 
+torch # or tensorflow, but transformers often pairs well with PyTorch 
+scipy # dependency for transformers/torch
