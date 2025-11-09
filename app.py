@@ -145,5 +145,3 @@ if st.button("✨ Generate Text"):
 
             # Display metadata for clarity
             st.info(f"**Seed Prompt:** {user_prompt}\n\n**Generation Model:** DistilGPT-2")
-
-!pip install streamlit
